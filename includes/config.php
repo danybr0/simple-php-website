@@ -3,12 +3,14 @@
 /**
  * Used to store website configuration information.
  *
- * @var string
+ * @var string or null
  */
 function config($key = '')
 {
     $config = [
         'name' => 'Simple PHP Website',
+        'site_url' => '',
+        'pretty_uri' => false,
         'nav_menu' => [
             '' => 'Home',
             'about-us' => 'About Us',
@@ -17,8 +19,7 @@ function config($key = '')
         ],
         'template_path' => 'template',
         'content_path' => 'content',
-        'pretty_uri' => true,
-        'version' => 'v2.0',
+        'version' => 'v3.1',
     ];
 
     return isset($config[$key]) ? $config[$key] : null;
